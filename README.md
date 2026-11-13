@@ -1,1 +1,18 @@
 # Prometheus and Grafana Assessment
+
+
+
+global:
+  scrape_interval: 15s
+
+
+scrape_configs:
+  - job_name: "prometheus"
+    static_configs:
+      - targets: ["prometheus:9090"]
+
+
+  - job_name: "node-exporter"
+    static_configs:
+      - targets: ["node-exporter:9100"]
+
